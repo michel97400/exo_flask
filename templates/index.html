@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block content %}
+  <h2>Bienvenue sur la page d’accueil</h2>
+  <p>Ceci est un exemple de contenu spécifique.</p>
+  <ul>
+    <p>Listes d'articles</p>
+    {% for article in articles %}
+        <li>{{ article.title }}--{{article.author}}</li>
+    {% endfor %}
+    </ul>
+{% endblock %}
